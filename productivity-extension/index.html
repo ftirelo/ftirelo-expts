@@ -15,8 +15,6 @@
   if (searchParams.has('d')) {
     const div = document.getElementById('custom-contents-hook');
     div.innerHTML = searchParams.get('d');
-    // var encodedURL= encodeURIComponent(searchParams.get('d'));
-    // console.log(encodedURL);
   } else {
     div.innerHTML = 'Use `d` query param to set contents to be rendered here';
   }
