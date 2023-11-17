@@ -1,0 +1,24 @@
+<html>
+<head>
+  <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+</head>
+
+<body>
+<div id="custom-contents-hook"></div>
+
+<script>
+  const searchParams = new URLSearchParams(window.location.search);
+  if (searchParams.has('d')) {
+    const div = document.getElementById('custom-contents-hook');
+    div.innerHTML = searchParams.get('d');
+    // var encodedURL= encodeURIComponent(searchParams.get('d'));
+    // console.log(encodedURL);
+  } else {
+    div.innerHTML = 'Use `d` query param to set contents to be rendered here';
+  }
+</script>
+</body>
